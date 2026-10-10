@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Pribadi Saya</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #2563eb, #111827);
+    }
+    h1 { font-size: 34px; }
+    section { padding: 25px 20px; }
+    .card {
+      background: #1f2937;
+      padding: 22px;
+      margin: 15px auto;
+      border-radius: 15px;
+      max-width: 420px;
+    }
+    a {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 9px;
+      text-decoration: none;
+    }
+    footer {
+      padding: 20px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Halo, Saya Irfan!</h1>
+    <p>Selamat datang di website pribadi saya.</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Tentang Saya</h2>
+      <p>Ini adalah website pribadi saya.
+      Saya suka belajar hal baru dan bermain game.</p>
+    </div>
+
+    <div class="card">
+      <h2>Hobi Saya</h2>
+      <p>Bermain game, mendengarkan musik,
+      dan menjelajahi teknologi.</p>
+    </div>
+
+    <div class="card">
+      <h2>Hubungi Saya</h2>
+      <p>Silakan hubungi saya melalui WhatsApp.</p>
+      <a href="https://wa.me/62XXXXXXXXXX">
+        WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Website Pribadi Saya
+  </footer>
+</body>
+</html>
