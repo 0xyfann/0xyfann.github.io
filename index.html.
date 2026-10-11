@@ -39,8 +39,66 @@
       color: #9ca3af;
     }
   </style>
+<style>
+/* Efek neon */
+h1, h2, h3 {
+  text-shadow: 0 0 8px #00eaff,
+               0 0 18px #008cff;
+}
+
+/* Latar bintang bergerak */
+#star-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#star-background::before,
+#star-background::after {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background-image:
+    radial-gradient(2px 2px at 40px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 120px 180px, #00eaff, transparent),
+    radial-gradient(2px 2px at 220px 90px, #fff, transparent),
+    radial-gradient(1px 1px at 300px 240px, #8c7bff, transparent);
+  background-size: 350px 300px;
+  animation: starMove 35s linear infinite;
+}
+
+#star-background::after {
+  opacity: 0.5;
+  animation-duration: 55s;
+  animation-direction: reverse;
+}
+
+@keyframes starMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(300px); }
+}
+
+/* Efek neon pada foto */
+img {
+  transition: filter 0.3s ease;
+}
+
+img:hover {
+  filter: drop-shadow(0 0 8px #00eaff);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #star-background::before,
+  #star-background::after {
+    animation: none;
+  }
+}
+</style>
 </head>
 <body>
+<div id="star-background" aria-hidden="true"></div>
   <header>
     <h1>Halo, Saya Irfan!</h1>
     <p>Selamat datang di website pribadi saya.</p>
